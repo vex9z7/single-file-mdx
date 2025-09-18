@@ -1,6 +1,7 @@
 import mdx from "@mdx-js/rollup";
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
+import { viteSingleFile } from "vite-plugin-singlefile";
 
 const viteConfig = defineConfig({
   plugins: [
@@ -11,6 +12,7 @@ const viteConfig = defineConfig({
       }),
     },
     react({ include: /\.(jsx|js|mdx|md|tsx|ts)$/ }),
+    viteSingleFile(),
   ],
 });
 
